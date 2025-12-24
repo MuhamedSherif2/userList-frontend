@@ -19,9 +19,16 @@ export class UserList implements OnInit {
   }
 
   getAllUsers() {
-    this.userService.getUsers().subscribe(res => {
-      console.log('Data received:', res.data);
-      this.users = res.data;
-    })
+    this.userService.getUsers().subscribe({
+      next: (res) => {
+        console.log('Full response:', res);
+        console.log('Data received:', res.data);
+        this.users = res.data;
+        console.log('Users array updated:', this.users.length);
+      },
+      error: (error) => {
+        console.error('Error loading users:', error);
+      }
+    });
   }
 }

@@ -1,4 +1,29 @@
+<div class="min-h-screen bg-linear-to-br from-gray-50 to-blue-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl text-blue-600">👥</span>
+            <h1 class="text-xl font-bold text-gray-800">{{ title() }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
   <main class="max-w-7xl mx-auto">
-    <router-outlet />
-    <app-user-list></app-user-list>
+    <app-user-list></app-user-list>  
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+      <div class="text-center">
+        <p class="text-gray-400">© 2024 - MEAN Stack Application</p>
+      </div>
+    </div>
+  </footer>
+</div>
